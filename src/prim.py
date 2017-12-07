@@ -1,4 +1,4 @@
-
+#sorry this is such garbage rn, really struggling here...
 from pythonds.graphs import PriorityQueue, Graph, Vertex
 
 def prim(Graph):
