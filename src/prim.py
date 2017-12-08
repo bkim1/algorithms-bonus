@@ -3,6 +3,7 @@ from pythonds.graphs import PriorityQueue, Graph, Vertex
 def prim(Graph, source):
     pq = PriorityQueue()
     source.setDistance(0)
+    total_weight = 0
     for n in Graph:
         n.setDistance(sys.maxsize)
         n.setPred(None)
@@ -16,5 +17,6 @@ def prim(Graph, source):
                 if weight < adj.getDistance(): #new weight is minimum
                     adj.setPred(currNode) #set the previous node of adjacent node
                     adj.setDistance(weight) #set weight
+                    total_weight += weight
                     pq.decreaseKey(adj, weight) #take the adj node out of the pq
 return pred
