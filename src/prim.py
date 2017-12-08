@@ -19,4 +19,4 @@ def prim(Graph, source):
                     adj.setDistance(weight) #set weight
                     total_weight += weight
                     pq.decreaseKey(adj, weight) #take the adj node out of the pq
-return pred
+return total_weight
