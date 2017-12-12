@@ -12,8 +12,8 @@ def boruvka(graph):
     edges = []
 
     for node in graph:
-        for u, v, w in graph[node]:
-            edges.append((u, v, w))
+        for v, w in graph[node]:
+            edges.append((node, v, w))
 
     # Stores the roots & rankings for all nodes in graph
     roots = []

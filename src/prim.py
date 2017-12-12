@@ -7,7 +7,7 @@ def prim(graph, source):
     for n in graph:
         n.setDistance(float('Inf'))
         n.setPred(None)
-    pq.buildHeap([(n.getDistance(), n) for n in Graph]) #(distance, node)
+    pq.buildHeap([(n.getDistance(), n) for n in graph]) #(distance, node)
 
     while pq:
         curr_node = pq.delMin() #get min value from priority queue
